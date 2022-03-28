@@ -1,23 +1,28 @@
 import calculator
+import pytest
 
+@pytest.mark.addsub
 def test_add():
     x = 10
     y = 20
     res = calculator.add(x,y)
     assert res == x+y
 
+@pytest.mark.addsub
 def test_sub():
     x = 10
     y = 20
     res = calculator.sub(x, y)
     assert res == x - y
 
+@pytest.mark.muldiv
 def test_mul():
     x = 10
     y = 20
     res = calculator.mul(x, y)
     assert res == x * y
 
+@pytest.mark.muldiv
 def test_div():
     x = 10
     y = 20
